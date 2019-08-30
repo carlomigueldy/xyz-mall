@@ -2,13 +2,13 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Model;
+use App\Employee;
 use Faker\Generator as Faker;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(Employee::class, function (Faker $faker) {
     return [
-        'role_id' => $faker->numberBetween($min = 1, $max = 3),
-        'role_id' => $faker->numberBetween($min = 1, $max = 3),
-        'role_id' => $faker->numberBetween($min = 1, $max = 3),
+        'user_id' => $faker->numberBetween($min = 1, $max = 10),
+        'department_id' => $faker->numberBetween($min = 1, $max = 6),
+        'position_id' => $faker->numberBetween($min = 1, $max = 3),
     ];
 });
